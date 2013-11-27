@@ -32,8 +32,7 @@
     // PKCS#1 (type 2, random) pad input string s to n bytes, and return a bigint
     function pkcs1pad2(s,n) {
         if(n < s.length + 11) { // TODO: fix for utf-8
-            alert("Message too long for RSA");
-            return null;
+            throw "Message too long for RSA";
         }
         var ba = [];
         var i = s.length - 1;
@@ -232,7 +231,7 @@
                 this.e = parseInt(E,16);
             }
             else
-                alert("Invalid RSA public key");
+                throw "Invalid RSA public key";
         },
         /**
          * Return the PKCS#1 RSA encryption of "text" as an even-length hex string

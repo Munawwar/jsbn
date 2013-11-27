@@ -83,7 +83,7 @@
             this.d = parseBigInt(D,16);
         }
         else
-            alert("Invalid RSA private key");
+            throw "Invalid RSA private key";
     };
     /**
      * Set the private key fields N, e, d and CRT params from hex strings
@@ -100,7 +100,7 @@
             this.coeff = parseBigInt(C,16);
         }
         else
-            alert("Invalid RSA private key");
+            throw "Invalid RSA private key";
     };
     /**
      * Generate a new random private key B bits long, using public expt E
