@@ -1,3 +1,5 @@
+Unmaintained library: There are now other libraries on npm for BigInteger arithmetic and RSA (which uses Node's crypto module), which makes this library redundant.
+
 BigIntegers and RSA in JavaScript
 =================================
 
